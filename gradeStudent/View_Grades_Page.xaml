@@ -1,0 +1,41 @@
+﻿<Window x:Class="gradeStudent.View_Grades_Page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gradeStudent"
+        mc:Ignorable="d"
+        Title="View_Grades_Page" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Logout" Background="BlueViolet" Grid.Column="2" Cursor="Hand" FontSize="18" Height="40" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="150" HorizontalAlignment="Right" Margin="0,2,0,0" Click="Button_Click" ></Button>
+        <Label Content="View Grades " Foreground="BlueViolet"
+               FontSize="20" Grid.Column="0" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Comic Sans MS"></Label>
+        <DataGrid AutoGenerateColumns="False" BorderBrush="DarkViolet" BorderThickness="2" Grid.Row="0" Name="dgGrade" Width="793"
+                  Grid.ColumnSpan="3" Margin="2,44,5,43" Grid.RowSpan="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Grade ID" Binding="{Binding  GradeID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Assignment Name" Binding="{Binding AssignmentName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Score" Binding="{Binding Score }"></DataGridTextColumn>
+                <DataGridTextColumn Header="MaxScore" Binding="{Binding MaxScore }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Student Name" Binding="{Binding enrollment.user.UName }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Course Name" Binding="{Binding enrollment.course.CName }"></DataGridTextColumn>
+                <DataGridTextColumn Header="Enroll Date" Binding="{Binding enrollment.EDate,StringFormat=dd/mm/yyyy }"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="AVG" Grid.Row="4" Height="40" Grid.ColumnSpan="2"
+        VerticalAlignment="Top" HorizontalAlignment="Center" 
+             Width="500" FontFamily="Comic Sans MS" FontSize="22" Foreground="BlueViolet" ></Label>
+    </Grid>
+</Window>

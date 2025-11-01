@@ -1,0 +1,40 @@
+﻿<Window x:Class="gradeStudent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gradeStudent"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="5" Margin="152,16,115,48" CornerRadius="70" BorderThickness="3"
+                BorderBrush="BlueViolet" Cursor="Hand" Height="370"></Border>
+        <Label Grid.Row="0" Grid.Column="1" Content="Welcome🦋📝" Height="40"  FontSize="20" FontFamily="Comic Sans MS" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" ></Label>
+        <StackPanel Width="400" Grid.ColumnSpan="3" Margin="211,86,0,41" HorizontalAlignment="Left" Orientation="Vertical" Height="90" Grid.RowSpan="2">
+            <Label Content="UserName " FontFamily="Comic Sans MS" FontSize="23"></Label>
+            <TextBox Name="txtUser" BorderBrush="Black" Height="34"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Width="400" Grid.ColumnSpan="3" Margin="211,83,0,44" HorizontalAlignment="Left" Orientation="Vertical" Height="90" Grid.RowSpan="2">
+            <Label Content="PassWord " FontFamily="Comic Sans MS" FontSize="23"></Label>
+            <PasswordBox Name="txtPass" BorderBrush="Black" Height="34"></PasswordBox>
+        </StackPanel>
+        <TextBlock Name="mytextTrue" Grid.Row="2" VerticalAlignment="Top" Height="30" Foreground="green" Margin="209,49,58,0" Grid.ColumnSpan="2" Width="320"/>
+        <TextBlock Name="mytextfalse" Grid.Row="2" VerticalAlignment="Top" Height="30" Foreground="red" Margin="209,49,58,0" Grid.ColumnSpan="2" Width="320"/>
+        <StackPanel Grid.Row="2" Width="200" Margin="44,87,0,30" HorizontalAlignment="Left" Orientation="Vertical" Height="90" Grid.Column="1" Grid.RowSpan="2">
+
+            <Button BorderBrush="Black" Height="40" Background="BlueViolet" Margin="10" Content="Login" FontFamily="Comic Sans MS" FontSize="26" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
